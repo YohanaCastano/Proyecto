@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: #ADD8E6;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+</style>
+<header class="header">
+  <div class="logo-header">
+      <a href=""><img src="Logo.png" alt=""></a>
+  </div>
+  <div class="nav-menu">
+      <input type="checkbox" id="check">    
+      <label for="check" class="checkbtn">
+          <i class="menu-icon"><img src="hamburguesa.png" alt=""></i>
+      </label>
+      <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienes somos.html">Quienes somos</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contactenos.html">Contactanos</a></li>
+          <li><a href="registrarse.html">Registrarse</a></li>
+          <li><a href="iniciar secion.html">Iniciar sesion</a></li>
+      </ul>
+  </div>
+</header>
+      
+  </ul>
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Formulario Registro de Venta</title>
+  <style>
+
+    /* Registro Ventas */
+
+    .formulario{
+        max-width: 500px;
+        margin:20% auto;
+        padding: 80px;
+        background: #76acf3;
+        border-radius: 15px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #76acf3;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], /*Cajones de Texto*/
+    input[type="number"],
+    select {
+      width: 70%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    input[type="submit"] { /*Boton*/
+      width: 35%;
+      padding: 5px;
+      background-color: #4857c4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      
+        }
+  </style>
+
+
+  <script>
+    function updatePrecioInput() {
+      var precioInput = document.getElementById("precio");
+      var precioValue = parseInt(precioInput.value);
+      var roundedValue = Math.ceil(precioValue / 50) * 50;
+      precioInput.value = roundedValue;
+    }
+  </script>
+</head>
+<body>
+<body> 
+  <h1>Registro de Venta</h1>
+
+  <form action="Registro Ventas.html" method="POST"><br>
+
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre"  required>
+
+    <input type="number" id="cantidad" name="cantidad" placeholder= "Seleccione la Cantidad"  required>
+
+    <select id="metodo_pago" name="metodo_pago" placeholder= "Seleccione metodo de pago" required>
+      <option value="">Seleccione un método de pago</option>
+      <option value="efectivo">Efectivo</option>
+      <option value="tarjeta">Tarjeta de Crédito</option>
+      
+    </select>
+
+    <input type="number" id="precio" name="precio"  placeholder= "Precio"  min="100" required onchange="updatePrecioInput()">
+
+    <select id="producto" name="producto"  placeholder= "Selecciona el producto"  required>
+      <option value="">Seleccione un producto</option>
+      <option value="Shampoo">Shampoo</option>
+      <option value="Tratamiento Capitar">Tratamiento Capitar</option>
+      <option value="Esmalte">Esmalte</option>
+      <option value="Tinte Igora">Tinte Igora</option>
+    </select>
+    
+    <br>
+    <input type="submit" value="Registrar Venta"><br><br>
+    <input type="submit" value="Seguir Comprando" onclick="window.location.href='productos.html'"><br><br>
+    <input type="submit" value="Borrar venta">
+
+
+    
+ </p>
+  </form>
+</body>
+</html>

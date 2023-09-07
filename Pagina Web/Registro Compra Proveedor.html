@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #ffffff;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #FFB7C2;
+        }
+        .usuario {
+            display: flex;
+            align-items: center;
+        }
+        .usuario img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .usuario span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .formulario {
+            max-width: 500px;
+            margin-right: 20px;
+            padding: 80px;
+            background: #FFB7C2;
+            border-radius: 15px;
+        }
+        .imagen {
+            flex: 0 0 40%;
+        }
+        .imagen img {
+            width: 100%;
+            display: block;
+        }
+        .form-content {
+            flex: 0 0 60%;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+        }
+        form {
+            max-width: 390px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #FFB7C2;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 80%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 45%;
+            padding: 5px;
+            background-color: #FE889F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav id="menu">
+            <li>
+                <div class="usuario">
+                    <img src="imagenes/yohana.jpg" alt="Foto de perfil"><br><br><br>
+                    <span>Yohana Castaño</span>
+                </div>
+            </li>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="formulario">
+            <h1>Registrar Compra Proveedor</h1><br>
+            <form action="gestion de inventario.html" method="POST">
+                <input type="text" id="proveedor" name="proveedor" placeholder="Proveedor" required><br>
+                <input type="text" id="producto" name="producto" placeholder="Producto" required><br>
+                <input type="number" id="cantidad" name="cantidad" placeholder="Cantidad" required><br>
+                <input type="number" id="precio" name="precio" placeholder="Precio" min="100" required><br>
+                <center>
+                    <input type="submit" value="Registrar Compra"><br><br>
+                    <input type="submit" value="Borrar Compra">
+                </center>
+            
+        </div>
+        <div class="imagen">
+            <img src="https://img.freepik.com/vector-gratis/ilustracion-concepto-cuaderno_114360-387.jpg?w=740&t=st=1688023763~exp=1688024363~hmac=eb76056873e4fba613d40dc657c5be252c3f2bc0ea302a8d65520643f579e482" alt="Imagen Registrarse" style="margin-top: 1px">
+        </div>
+    </div>
+
+    <script>
+        function redireccionarPagina() {
+            window.location.href = "gestion de inventario.html";
+        }
+    </script>
+</form><br><br>
+<center><button class="button" onclick="redireccionarPagina()">Volver a la página principal</button></center>
+
+</body>
+</html>
