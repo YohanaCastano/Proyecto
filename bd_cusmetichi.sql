@@ -1115,6 +1115,12 @@ ALTER TABLE `proveedor`
   MODIFY `pkidProveedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
+-- AUTO_INCREMENT de la tabla `rol`
+--
+ALTER TABLE `rol`
+  MODIFY `pkidRol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de la tabla `salidas`
 --
 ALTER TABLE `salidas`
