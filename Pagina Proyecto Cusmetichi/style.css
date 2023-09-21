@@ -1,0 +1,440 @@
+/*menu*/
+
+header.header {
+    background-color: #fe889f;
+    color: #fff;
+    display: flex;
+    
+   
+  justify-content: space-between;
+    
+   
+  align-items: center;
+    padding: .3rem 2rem;
+  }
+  .header {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px;
+    z-index: 999;
+  }
+  
+.logo-header img{
+    width: 200px;
+}
+
+.logo-header img{
+    width: 100px;
+}
+.nav-menu ul{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase; /*hace que las letras queden en mayuscula todas*/
+    text-decoration:none;
+    list-style: none;
+    
+}
+a:hover{
+    background-color: #6c9fbf; /*hace que al pasar el cursor por el menu cambia de color*/
+}
+.nav-menu li{
+    margin-right: 3rem;
+    
+}
+.nav-menu a{
+    color: #fff;
+    text-decoration:none;
+    
+}
+.menu-icon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+}
+.menu-icon, #check{
+    display: none;
+}
+
+@media (max-width:768px){  /*hace que el menu cuando minimicemos la pagina aparezca el menu en menu hamburguesa*/
+    .checkbtn{
+        display: block;
+    }
+    .menu-icon{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .nav-menu ul{
+        display: block;
+        position:absolute;
+        top:70px;
+        left:-100%;
+        background:   #FFB7C2;  /*color de la barra del menu hamburguesa*/
+        width: 70%;
+        height: 85vh;
+        right: 0;
+        z-index: 2;    /* esta etiqueta hace que el menu hamburguesa se despliegue por encima del banner*/
+        text-transform: uppercase;
+        
+    }
+    .nav-menu ul li{
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+     
+    }
+    .nav-menu ul li:last-child{
+        background: none;
+        padding: 1rem;
+      
+    }
+    #check:checked ~ ul{
+        left: 0;
+        transition: all .25s;
+    }
+}
+
+/*banner*/
+
+.slide {
+    position: relative;
+    margin-top: 50px; /* para una distancia entre el menú y el banner */
+}
+
+.slider ul {
+    display: flex;
+    animation: cambio 5s infinite alternate linear;
+}
+
+.slide-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 70vh; /* tamaño del carrusel ajustado en altura relativa */
+}
+
+.slide-open:checked + .slide-item {
+    position: static;
+    opacity: 100;
+}
+
+.slide-item {
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    transition: transform 0.6s ease;
+    
+}
+
+
+.slide-item img {
+    display: block;
+    height: auto;
+    width: 100%; /* ajusta la imagen al ancho del contenedor */
+}
+
+.slide-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 100%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%; /* determina que los botones direccionales queden centrados en el banner */
+    transform: translateY(-50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.slide-control.next {
+    right: 5%;
+}
+
+.slide-control.prev {
+    left: 5%;
+}
+
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3 {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    /* Estilos específicos para pantallas más pequeñas */
+    .slide-inner {
+        height: 50vh;
+    }
+    
+    .slide-item img {
+        max-width: 150%;
+        
+    }
+
+    .slide-control {
+        font-size: 30px;
+        height: 30px;
+        line-height: 25px;
+        width: 30px;
+    }
+}
+
+.ad-container {
+    width: 300px;
+    height: 250px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .ad-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+/*productos*/
+body {
+    background-color: #ffffff; 
+
+    background-position: center;    
+    background-repeat: no-repeat;    
+
+    background-size: cover;
+    background-attachment: fixed;
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    margin-top: 50px;
+    font-weight: 100;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container .card {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    box-sizing: border-box;
+}
+
+.container .card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.container .card h4 {
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.container .card p {
+    margin: 0;
+    padding: 0 10px;
+}
+
+.container .card button {
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 40px;
+    }
+}
+
+
+
+/*Responsive Video*/
+
+video {
+    width: 70%;
+    height: auto;
+    }
+
+
+/*quienes somos*/
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+background-color: #FFB7C2;
+}
+header {
+background-color:#FFB7C2 ;
+color: #fff;
+padding: 20px;
+margin-bottom: 20px;
+}
+h1 {
+margin: 0;
+}
+main {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+background-color: #fff;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+h2 {
+font-size: 28px;
+margin-top: 0;
+}
+p {
+font-size: 18px;
+line-height: 1.5;
+text-align: justify;
+margin-bottom: 20px;
+}
+
+
+
+/*formulatrio contactenos*/
+
+body {
+    background-color: #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+.formulario {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FFB7C2;
+}
+input[type="text"],input[type="password"]{
+width: 80%;
+margin: 10px;
+padding: 10px;
+border-radius:8px;
+border:none;
+box-sizing: border-box;
+}
+.mapa {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+iframe {
+    max-width: 400%;
+    height: 400px;
+    border: 0;
+}
+
+/*pie de pagina*/
+
+footer {
+    background-color: #FFB7C2;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 150px;
+  }
+  
+  .links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .links ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .links ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .social-media a {
+    display: inline-block;
+    margin-right: 10px;
+    
+   
+  color: #333;
+    
+   
+  font-size: 20px;
+  }
+  
+  .bottom-bar {
+    
+   
+  margin-top: 20px;
+    
+   
+  border-top: 1px solid #ccc;
+    
+   
+  padding-top: 10px;
+  }
+  .mapa {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
